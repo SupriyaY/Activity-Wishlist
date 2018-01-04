@@ -6,11 +6,11 @@ mongoose.Promise = global.Promise
 const ActivitySchema = new Activity({
     activity_place: {
         type: String,
-        required: [true, 'Activity place is required!']
+        required: [ true, 'Activity place is required!' ]
     },
     acivity_name: {
         type: String,
-        required: [true, 'Activity name is required!']
+        required: [ true, 'Activity name is required!' ]
 
     },
     actvity_address: {
@@ -46,11 +46,11 @@ const UserSchema = new Schema (
 {
 username: {
     type: String,
-    required:
+    required: true [ 'Username is required!' ] 
 },
     name:  {
     type: String,
-    required: [true, 'Name is required'],
+    required: [ true, 'Name is required!' ] 
     },
 
     photoUrl: {
