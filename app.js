@@ -16,6 +16,9 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+const methodOverride = require('method-override')
+app.use(methodOverride('_method'))
+
 // Mongo connection set-up
 mongoose.Promise = global.Promise
 mongoose.connect(process.env.MONGODB_URI)
