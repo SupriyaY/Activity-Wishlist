@@ -1,3 +1,5 @@
+require('dotenv').config();
+var mongoose = require('mongoose');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -13,6 +15,22 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
+// Mongo connection set-up
+mongoose.Promise = global.Promise
+mongoose.connect(process.env.MONGODB_URI)
+
+mongoose.connection.once('open', () => {
+  console.log('Mongoose has connected to MongoDB!')
+})
+
+mongoose.connection.on('error', (error) => {
+  console.error(`
+    MongoDB connection error!!! 
+    ${error}
+  `)
+  process.exit(-1)
+})
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
