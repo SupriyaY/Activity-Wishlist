@@ -1,0 +1,27 @@
+<div class="stepper">
+    <a href="/users">Home</a> / Profile
+</div>
+
+<h1>{{user.name}}</h1>
+<div class="user-container">
+    <div>
+        {{#if user.photo_url}}
+        <img src="{{user.photo_url}}" alt="{{user.username}}'s profile photo"> {{else}}
+        <img src="https://picsum.photos/200/300" alt="{{user.username}}'s profile photo"> {{/if}}
+    </div>
+    <div class="user-info">
+        <div class="button-container">
+            <div class="button primary">
+                <a href="/users/{{user._id}}/edit">Update User Details</a>
+            </div>
+            <div class="button warning">
+                <a href="/users/{{user._id}}/delete">Delete User</a>
+            </div>
+        </div>
+        <div>Username:
+            <strong>{{user.username}}</strong>
+        </div>
+        <div class="visit-city">
+            <a href="/users/{{user._id}}/cities">City To Visit</a>
+        </div>
+    </div>

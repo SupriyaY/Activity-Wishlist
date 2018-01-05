@@ -10,19 +10,19 @@ var app = express();
 
 //var index = require('./routes/index');
 const userController = require('./controllers/userController')
-app.use('/users', userController)
+
 // const citiesController = require('./controllers/citiesController')
 // app.use('users/:userId/cities', citiesController)
 // const activitiesController = require('./controllers/activitiesController')
 // app.use('/users/:userId/cities/:citiesId/activities', activitiesController)
 
 //auto redirect to the users page on load
-app.get('/', (request, response) => {
-response.redirect('/users')
-})
+// app.get('/', (request, response) => {
+// response.redirect('/users')
+// })
 
+app.use('/', userController)
 
-var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
