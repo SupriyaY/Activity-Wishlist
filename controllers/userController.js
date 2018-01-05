@@ -17,42 +17,42 @@ router.get('/', (request, response) => {
     })
 })
 //new
-// router.get('/new', (request, response) => {
-//   response.render('users/new', { pageTitle: 'New User' })
-// })
+router.get('/new', (request, response) => {
+  response.render('users/new', { pageTitle: 'New User' })
+})
 
-// //create
-// router.post('/', (request, response) => {
-//   const newUser = request.body
-//   if (!newUser.photo_url) {
-//     newUser.photo_url = 'https://i.imgur.com/xln20Nb.jpg?1'
+//create
+router.post('/', (request, response) => {
+  const newUser = request.body
+  if (!newUser.photo_url) {
+    newUser.photo_url = 'https://i.imgur.com/xln20Nb.jpg?1'
 
-//   }
+  }
 
-//   User.create(newUser)
-//     .then(() => {
-//       response.redirect('/users')
-//     })
-//     .catch((error) => {
-//       console.log(error)
-//     })
-// })
-// //show
-// router.get('/:userId', (request, response) => {
-//  const userId = request.params.userId
-// User.findById(userId)
-// .then((user) => {
-// response.render('users/show', {
-//   user,
-//   pageTitle: user.username
-// })
+  User.create(newUser)
+    .then(() => {
+      response.redirect('/users')
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
+//show
+router.get('/:userId', (request, response) => {
+ const userId = request.params.userId
+User.findById(userId)
+.then((user) => {
+response.render('users/show', {
+  user,
+  pageTitle: user.username
+})
 
-// })
-// .catch((error) => {
-//   console.log(error)
+})
+.catch((error) => {
+  console.log(error)
 
-// })
-// })
+})
+})
 
 // //edit
 // router.get('/:userId/edit', (request, response) => {

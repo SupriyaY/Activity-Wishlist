@@ -5,7 +5,8 @@ const Activity = require('./models/Activity')
 const mongoose = require('mongoose')
 
 
-mongoose.connect('mongodb://localhost/places_db')
+mongoose.connect(process.env.MONGODB_URI)
+
 
 
 mongoose.connection.once('open', () => {

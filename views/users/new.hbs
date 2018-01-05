@@ -1,0 +1,30 @@
+<div class="stepper">
+    <a href="/users">Home</a> / New Profile
+</div>
+<div class="card">
+
+    <h2>User Info</h2>
+    <div>
+        <form action="/users" method="POST">
+            <div class="form-input">
+                <label for="username">Username</label>
+                <input type="text" name="username" required/>
+            </div>
+
+            <div class="form-input">
+                <label for="name">Name</label>
+                <input type="text" name="Name" required/>
+            </div>
+
+            <div class="form-input">
+                <label for="photo_url">Photo Url</label>
+                <input type="text" name="photo_url" />
+            </div>
+
+            <div class="button-container flex-end">
+                <input class="button primary" type="submit" value="Create User">
+                <a href="/users" class="button warning">Home</a>
+            </div>
+        </form>
+    </div>
+</div>
