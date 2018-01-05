@@ -82,7 +82,7 @@ console.log(error)
 })
 
 // //update
-router.put('/userId', (request, response) => {
+router.put('/:userId', (request, response) => {
 const userId = request.params.userId
 const updatedUserInfo = request.body
 
