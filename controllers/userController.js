@@ -68,17 +68,17 @@ response.render('users/show', {
 
 // })
 // //delete
-// router.get('/:userId/delete', (request, response) => { 
-// const userId = request.params.userId
-// User.findByIdAndRemove(userId)
-// .then (() => {
-//   response.redirect('/users')
-// })
-// .catch((error) => {
-// console.log(error)
-// })
+router.get('/:userId/delete', (request, response) => { 
+const userId = request.params.userId
+User.findByIdAndRemove(userId)
+.then (() => {
+  response.redirect('/users')
+})
+.catch((error) => {
+console.log(error)
+})
 
-// })
+})
 
 // //update
 // router.put('/userId', (request, response) => {
