@@ -1,16 +1,16 @@
 const mongoose = require('mongoose')
-const Schema = moongoose.Schema
+const Schema = mongoose.Schema
 
 mongoose.Promise = global.Promise
 
-const ActivitySchema = new Activity({
+const ActivitySchema = new Schema({
     activity_place: {
         type: String,
-        required: [ true, 'Activity place is required!' ]
+        required: [true, 'Activity place is required!']
     },
-    acivity_name: {
+    activity_name: {
         type: String,
-        required: [ true, 'Activity name is required!' ]
+        required: [true, 'Activity name is required!']
 
     },
     activity_address: {
@@ -32,7 +32,7 @@ const CitySchema = new Schema({
 
     city_name: {
         type: String,
-        required: [ true, 'City name is required' ]
+        required: [ true, 'City name is required!' ]
 
     },
     activitiesToComplete: [ ActivitySchema ]

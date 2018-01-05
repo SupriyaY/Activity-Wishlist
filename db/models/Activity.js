@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
-const schema = require('../schema')
+const Schema = require('../schema')
 
 
 const Activity = mongoose.model('Activity', Schema.ActivitySchema)
 
-module.export = Activity
+module.exports = Activity
