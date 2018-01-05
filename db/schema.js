@@ -13,7 +13,7 @@ const ActivitySchema = new Activity({
         required: [ true, 'Activity name is required!' ]
 
     },
-    actvity_address: {
+    activity_address: {
         type: String
 
     },
@@ -32,10 +32,10 @@ const CitySchema = new Schema({
 
     city_name: {
         type: String,
-        required: [true, 'City name is required']
+        required: [ true, 'City name is required' ]
 
     },
-    activitiesToComplete: [ActivitySchema]
+    activitiesToComplete: [ ActivitySchema ]
 
 }, {
     timestamps: {}

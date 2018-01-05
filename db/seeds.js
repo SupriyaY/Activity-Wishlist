@@ -16,8 +16,30 @@ console.log(`Mongoose has connected to MongoDB`)
 })
 
 mongoose.connection.on('error', (error) => {
-console.error(`MongoDB connection error!`)
+console.error(`MongoDB connection error!
+${error}
+`)
+process.exit(-1)
+})
 
+User.remove({}).then(() => {
+const Supsy = new User ({
+username: 'sups_y',
+name: 'Supriya',
+photoUrl: ''
 
+})
 
-}
+const miami = new City ({
+    city_name: 'Miami',
+
+})
+const shoreClub = new Activity ({
+activity_place: "Shore Club South Beach",
+activity_name: "Brunch",
+activity_address: "1901 Collins Ave, Miami Beach, FL 33139",
+activity_description: "Boozey brunch and lounging poolside",
+})
+miami.activitiesToComplete(shoreClub)
+
+})
