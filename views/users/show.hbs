@@ -6,8 +6,8 @@
 <div class="user-container">
     <div>
         {{#if user.photo_url}}
-        <img src="{{user.photo_url}}" alt="{{user.name}}'s profile photo"> {{else}}
-        <img src="https://picsum.photos/200/300" alt="{{user.name}}'s profile photo"> {{/if}}
+        <img src="{{user.photo_url}}" alt="{{user.username}}'s profile photo"> {{else}}
+        <img src="https://picsum.photos/200/300" alt="{{user.username}}'s profile photo"> {{/if}}
     </div>
     <div class="user-info">
         <div class="button-container">
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div>Username:
-            <strong>{{user.name}}</strong>
+            <strong>{{user.username}}</strong>
         </div>
         <div class="visit-city">
             <a href="/users/{{user._id}}/cities">City To Visit</a>

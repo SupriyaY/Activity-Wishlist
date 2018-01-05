@@ -52,22 +52,23 @@ response.render('users/show', {
 })
 })
 
-// //edit
-// router.get('/:userId/edit', (request, response) => {
-// const userId = request.params.userId
-// User.findById(userId)
-// .then((user) => {
-//   response.render('users/edit', {
-//     user,
-//     pageTitle: 'Profile_Update'
-//   })
-// })
-// .catch((error) => {
-// console.log
-// })
+//edit
+router.get('/:userId/edit', (request, response) => {
+const userId = request.params.userId
+User.findById(userId)
+.then((user) => {
+  response.render('users/edit', {
+    user,
+    pageTitle: 'Profile_Update'
+  })
+})
+.catch((error) => {
+console.log
+})
 
-// })
-// //delete
+})
+
+//delete
 router.get('/:userId/delete', (request, response) => { 
 const userId = request.params.userId
 User.findByIdAndRemove(userId)
@@ -81,14 +82,14 @@ console.log(error)
 })
 
 // //update
-// router.put('/userId', (request, response) => {
-// const userId = request.params.userId
-// const updatedUserInfo = request.body
+router.put('/userId', (request, response) => {
+const userId = request.params.userId
+const updatedUserInfo = request.body
 
-// User.findByIdAndUpdate(userId, updatedUserInfo, {new: true})
-// .then (() => {
-// response.redirect(`/users/$[userId]`)
-// })
-// })
+User.findByIdAndUpdate(userId, updatedUserInfo, {new: true})
+.then (() => {
+response.redirect(`/users/$[userId]`)
+})
+})
 
 module.exports = router;
