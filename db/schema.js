@@ -53,7 +53,7 @@ username: {
     required: [ true, 'Name is required!' ] 
     },
 
-    photoUrl: {
+    photo_url: {
     type: String,
         default:'https://cdn.vectorstock.com/i/thumb-large/66/69/santa-hat-vector-296669.jpg'
 

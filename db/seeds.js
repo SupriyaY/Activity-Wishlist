@@ -5,58 +5,87 @@ const Activity = require('./models/Activity')
 const mongoose = require('mongoose')
 
 
-
 mongoose.connect('mongodb://localhost/places_data')
 
-mongoose.connection.once('open',() => {
-console.log(`Mongoose has connected to MongoDB`)
-
-
-
+mongoose.connection.once('open', () => {
+    console.log(`Mongoose has connected to MongoDB`)
 })
 
 mongoose.connection.on('error', (error) => {
-console.error(`MongoDB connection error!
+    console.error(`MongoDB connection error!
 ${error}
 `)
-process.exit(-1)
+    process.exit(-1)
 })
 
 User.remove({}).then(() => {
-const Supsy = new User ({
-username: 'sups_y',
-name: 'Supriya',
-photoUrl: ''
+        const Supsy = new User({
+            username: 'sups',
+            name: 'Supriya Yerramilli',
+            photo_url: 'https://i.imgur.com/xln20Nb.jpg?1'
 
-})
+        })
 
-const miami = new City ({
-    city_name: 'Miami',
+        const miami = new City({
+            city_name: 'Miami'
 
-})
-const shoreClub = new Activity ({
-activity_place: "Shore Club South Beach",
-activity_name: "Brunch",
-activity_address: "1901 Collins Ave, Miami Beach, FL 33139",
-activity_description: "Boozey brunch and lounging poolside."
-})
+        })
+        const shoreClub = new Activity({
+            activity_place: "Shore Club South Beach",
+            activity_name: "Brunch",
+            activity_address: "1901 Collins Ave, Miami Beach, FL 33139",
+            activity_description: "Boozey brunch and lounging poolside."
+        })
 
-miami.activitiesToComplete.push(shoreClub)
-
-})
-
-const atlanta = new City ({
-city_name: 'Atlanta'
-})
-
-const footballGame = new Actvity ({
-activity_place: "Atlanta Falcons game",
-activity_name: "Football game",
-activity_address: "1414 Andrew Young International Blvd NW, Atlanta, GA 30313",
-activity_description: "Football, beer, and hotdogs at Mercedes-Benz Stadium!"
-
-.return sups_y.save()
+        miami.activitiesToComplete.push(shoreClub)
 
 
 
-.catch((error)
+        const atlanta = new City({
+            city_name: 'Atlanta'
+        })
+
+        const footballGame = new Activity({
+            activity_place: 'Atlanta Falcons game',
+            activity_name: 'Football game',
+            activity_address: '1414 Andrew Young International Blvd NW, Atlanta, GA 30313',
+            activity_description: 'Football, beer, and hotdogs at Mercedes-Benz Stadium!'
+        })
+
+        atlanta.activitiesToComplete.push(footballGame)
+
+        sups_y.cities.push(miami, atlanta)
+
+        return sups.save()
+
+    }).then(() => {
+        return User.create({
+            username: 'ninti',
+            name: 'Ninti Chance',
+            photo_url: 'https://i.imgur.com/Wj8WXHU.png?2'
+
+        })
+    }).then((ninti) => {
+            const newYork = new City({
+                city_name: "New York"
+            })
+
+            const losAngles = new City ({
+                city_name: 'Los Angeles'
+            })
+
+            ninti.cities.push(newYork, losAngeles)
+
+return ninti.save()
+                    .catch((error) => {
+                        console.log('Error seeded data!')
+                        console.log(error)
+                    }).then(() {
+                        mongoose.connection.close()
+                        console.log(`Finished seeding database...
+    Disconnected from MongoDB
+    `)
+
+
+
+                    })
