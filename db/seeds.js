@@ -5,7 +5,7 @@ const Activity = require('./models/Activity')
 const mongoose = require('mongoose')
 
 
-mongoose.connect('mongodb://localhost/places_data')
+mongoose.connect('mongodb://localhost/places_db')
 
 mongoose.connection.once('open', () => {
     console.log(`Mongoose has connected to MongoDB`)
@@ -77,15 +77,13 @@ User.remove({}).then(() => {
             ninti.cities.push(newYork, losAngeles)
 
 return ninti.save()
+        })
                     .catch((error) => {
-                        console.log('Error seeded data!')
+                        console.log('Error saving seeded data!')
                         console.log(error)
-                    }).then(() {
+                    }).then(() => {
                         mongoose.connection.close()
                         console.log(`Finished seeding database...
     Disconnected from MongoDB
     `)
-
-
-
                     })
