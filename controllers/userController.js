@@ -22,7 +22,6 @@ router.get('/new', (request, response) => {
 })
 router.post('/', (request, response) => {
   const newUser = request.body
-  console.log("****REQUEST*****", request)
   if (!newUser.photo_url) {
     newUser.photo_url = 'https://i.imgur.com/xln20Nb.jpg?1'
 
@@ -42,7 +41,7 @@ User.findById(userId)
 .then((user) => {
 response.render('users/show', {
   user,
-  pageTitle: user.username
+  pageTitle: 'Username'
 })
 
 })
