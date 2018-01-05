@@ -20,15 +20,12 @@ router.get('/', (request, response) => {
 router.get('/new', (request, response) => {
   response.render('users/new', { pageTitle: 'New User' })
 })
-
-//create
 router.post('/', (request, response) => {
   const newUser = request.body
   if (!newUser.photo_url) {
     newUser.photo_url = 'https://i.imgur.com/xln20Nb.jpg?1'
 
   }
-
   User.create(newUser)
     .then(() => {
       response.redirect('/users')

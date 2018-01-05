@@ -8,9 +8,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var app = express();
 
-//var index = require('./routes/index');
-const userController = require('./controllers/userController')
 
+const userController = require('./controllers/userController')
+app.use('/users', userController)
 // const citiesController = require('./controllers/citiesController')
 // app.use('users/:userId/cities', citiesController)
 // const activitiesController = require('./controllers/activitiesController')
@@ -21,7 +21,7 @@ const userController = require('./controllers/userController')
 // response.redirect('/users')
 // })
 
-app.use('/', userController)
+
 
 
 // view engine setup
@@ -55,7 +55,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//app.use('/', index);
+
 
 // catch 404 and forward to error handler
 app.use(function(request, response, next) {
