@@ -9,20 +9,6 @@ var bodyParser = require('body-parser');
 var app = express();
 
 
-const userController = require('./controllers/userController')
-app.use('/users', userController)
-// const citiesController = require('./controllers/citiesController')
-// app.use('users/:userId/cities', citiesController)
-// const activitiesController = require('./controllers/activitiesController')
-// app.use('/users/:userId/cities/:citiesId/activities', activitiesController)
-
-//auto redirect to the users page on load
-// app.get('/', (request, response) => {
-// response.redirect('/users')
-// })
-
-
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -54,6 +40,20 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+
+
+const userController = require('./controllers/userController')
+app.use('/users', userController)
+// const citiesController = require('./controllers/citiesController')
+// app.use('users/:userId/cities', citiesController)
+// const activitiesController = require('./controllers/activitiesController')
+// app.use('/users/:userId/cities/:citiesId/activities', activitiesController)
+
+//auto redirect to the users page on load
+app.get('/', (request, response) => {
+response.redirect('/users')
+})
 
 
 
