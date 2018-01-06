@@ -80,7 +80,7 @@ console.log(error)
 
 })
 
-// //update
+//update
 router.put('/:userId', (request, response) => {
 const userId = request.params.userId
 const updatedUserInfo = request.body

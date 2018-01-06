@@ -46,7 +46,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 const userController = require('./controllers/userController')
 app.use('/users', userController)
 const citiesController = require('./controllers/citiesController')
-app.use('users/:userId/cities', citiesController)
+app.use('/users/:userId/cities', citiesController)
 // const activitiesController = require('./controllers/activitiesController')
 // app.use('/users/:userId/cities/:citiesId/activities', activitiesController)
 
