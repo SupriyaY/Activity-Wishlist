@@ -30,7 +30,7 @@ router.get('/new', (request, response) => {
 
 router.get('/:cityId', (request, response) => {
     const userId = request.params.userId
-    const storeId = request.params.cityId
+    const cityId = request.params.cityId
 
     User.findById(userId)
         .then((user) => {

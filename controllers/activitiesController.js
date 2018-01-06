@@ -26,8 +26,8 @@ router.post('/', (request, response) => {
 
     User.findById(userId)
         .then((user) => {
-            const store = user.cities.id(cityId)
-            store.activitiesToComplete.push(newActivity)
+            const city = user.cities.id(cityId)
+            city.activitiesToComplete.push(newActivity)
 
             return user.save()
         })

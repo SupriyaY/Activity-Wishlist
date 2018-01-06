@@ -1,0 +1,21 @@
+<div class="stepper">
+    <a href="/users">Home</a> /
+    <a href="/users/{{userId}}">Profile</a> /
+    <a href="/users/{{userId}}/stores">Cities</a> /
+    <a href="/users/{{userId}}/stores/{{city._id}}">{{city.city_name}}</a> / Activities
+</div>
+
+<div class="user-container">
+    <div>
+        <img src="https://placehold.it/256/256" alt="placeholder">
+    </div>
+    <div class="user-info">
+        <h1>{{activity.activity_place}}</h1>
+        <div>Name: {{gift.activity_name}}</div>
+        <div>Adresss: ${{activity.activity_address}}</div>
+        <div>Description: {{activity.description}}</div>
+        <div>Visited: {{activity.visited}}</div>
+    <div>Recommend to friends: {{activity.recommend_to_friends}}</div>
+        <a class="button warning" href="/users/{{userId}}/city/{{city._id}}/gifts/{{activities._id}}/delete">Delete</a>
+    </div>
+</div>
