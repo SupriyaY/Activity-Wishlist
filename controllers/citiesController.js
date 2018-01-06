@@ -30,7 +30,7 @@ router.get('/new', (request, response) => {
 
 router.get('/:cityId', (request, response) => {
     const userId = request.params.userId
-    const storeId = request.params.storeId
+    const storeId = request.params.cityId
 
     User.findById(userId)
         .then((user) => {
@@ -70,7 +70,7 @@ router.get('/:cityId/delete', (request, response) => {
 
     User.findById(userId)
         .then((user) => {
-            user.stores.id(cityId).remove()
+            user.cities.id(cityId).remove()
             return user.save()
         })
         .then(() => {
