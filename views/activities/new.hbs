@@ -1,27 +1,35 @@
-<div class="class">"stepper"
+<div class="class"="stepper">
     <a href="/users">Home</a> /
     <a href="/users/{{userId}}">Profile</a> /
-    <a href="/users/{{userId}}/stores">Cities</a> /
-    <a href="/users/{{userId}}/stores/{{city._id}}">{{city.city_name}}</a> / New Acivity
+    <a href="/users/{{userId}}/cities">Cities</a> /
+    <a href="/users/{{userId}}/cities/{{city._id}}">{{city.city_name}}</a> / New Activity
 </div>
 <div class="card">
     <form action="/users/{{userId}}/cities/{{city._id}}/activities" method="POST">
-        <h2>New Acivity</h2>
+        <h2>New Activity</h2>
         <div class="form-input">
-            <label for="activity_place">Name of Place:</label>
+            <label for="activity_place">Activity Place:</label>
             <input type="text" name="activity_place">
         </div>
         <div class="form-input">
-            <label for="activity_name">Name of Activity:</label>
-            <input type="text" name="activity_description">
+            <label for="activity_name">Activity Name:</label>
+            <input type="text" name="activity_name">
         </div>
         <div class="form-input">
             <label for="activity_address">Address:</label>
-            <input type="number" name="price">
+            <input type="text" name="activity_address">
         </div>
         <div class="form-input">
-            <label for="activity_descritption">Activity Description</label>
+            <label for="activity_description">Description:</label>
             <input type="text" name="activity_description">
+        </div>
+        <div class="form-input">
+            <label for="visited">Visited:</label>
+            <input type="text" name="visited">
+        </div>
+        <div class="form-input">
+            <label for="recommend_to_friends">Recommend to friends:</label>
+            <input type="text" name="recommend_to_friends">
         </div>
         <div class="button-container flex-end">
             <input class="button primary" type="submit" value="Create Activity">

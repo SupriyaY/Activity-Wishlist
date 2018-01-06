@@ -21,9 +21,9 @@ const ActivitySchema = new Schema({
         type: String
     },
     visited: {
-        type: Boolean
+        type: String
     },
-    recommend_to_friends: Boolean
+    recommend_to_friends: String
 }, {
     timestamps: {}
 })

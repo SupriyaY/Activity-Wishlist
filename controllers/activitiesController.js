@@ -20,7 +20,7 @@ const city = user.cities.id(cityId)
 
 router.post('/', (request, response) => {
     const userId = request.params.userId
-    const storeId = request.params.cityId
+    const cityId = request.params.cityId
 
     const newActivity = request.body
 
