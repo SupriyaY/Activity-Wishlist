@@ -37,7 +37,28 @@ router.post('/', (request, response) => {
 })
 
 
+router.get('/:activityId', (request, response) => {
+const userId = request.params.userId
+const cityId = request.params.cityId
+const activityId = request.params.activityId
 
+User.findById(userId)
+.then((user) => {
+    const city = user.cities.id(cityId)
+    const acitivity = city.activitiesToComplete.id(acitivityId)
+
+    response.render('activities/show', {
+        userId,
+        city,
+        activity,
+        pageTitle: 'Activities'
+    })
+})
+.catch((error) => {
+console.log(error)
+
+})
+})
 
 
 

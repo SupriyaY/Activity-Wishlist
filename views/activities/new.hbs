@@ -1,0 +1,31 @@
+<div class="class">"stepper"
+    <a href="/users">Home</a> /
+    <a href="/users/{{userId}}">Profile</a> /
+    <a href="/users/{{userId}}/stores">Cities</a> /
+    <a href="/users/{{userId}}/stores/{{city._id}}">{{city.city_name}}</a> / New Acivity
+</div>
+<div class="card">
+    <form action="/users/{{userId}}/cities/{{city._id}}/activities" method="POST">
+        <h2>New Acivity</h2>
+        <div class="form-input">
+            <label for="activity_place">Name of Place:</label>
+            <input type="text" name="activity_place">
+        </div>
+        <div class="form-input">
+            <label for="activity_name">Name of Activity:</label>
+            <input type="text" name="activity_description">
+        </div>
+        <div class="form-input">
+            <label for="activity_address">Address:</label>
+            <input type="number" name="price">
+        </div>
+        <div class="form-input">
+            <label for="activity_descritption">Activity Description</label>
+            <input type="text" name="activity_description">
+        </div>
+        <div class="button-container flex-end">
+            <input class="button primary" type="submit" value="Create Activity">
+            <a href="/users/{{userId}}/cities/{{city._id}}" class="button warning">Cancel</a>
+        </div>
+        </form>
+        </div>
