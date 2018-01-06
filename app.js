@@ -47,8 +47,8 @@ const userController = require('./controllers/userController')
 app.use('/users', userController)
 const citiesController = require('./controllers/citiesController')
 app.use('/users/:userId/cities', citiesController)
-// const activitiesController = require('./controllers/activitiesController')
-// app.use('/users/:userId/cities/:citiesId/activities', activitiesController)
+const activitiesController = require('./controllers/activitiesController')
+app.use('/users/:userId/cities/:cityId/activities', activitiesController)
 
 //auto redirect to the users page on load
 app.get('/', (request, response) => {
