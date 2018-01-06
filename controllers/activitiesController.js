@@ -45,7 +45,7 @@ const activityId = request.params.activityId
 User.findById(userId)
 .then((user) => {
     const city = user.cities.id(cityId)
-    const acitivity = city.activitiesToComplete.id(acitivityId)
+    const activity = city.activitiesToComplete.id(activityId)
 
     response.render('activities/show', {
         userId,
