@@ -1,0 +1,25 @@
+<div class="stepper">
+    <a href="/users">Home</a> /
+    <a href="/users/{{userId}}">Profile</a> / Cities
+</div>
+
+<div class="city-header">
+    <h1>{{userName}}'s Cities</h1>
+    <div class="button primary">
+        <a href="/users/{{userId}}/cities/new">Add a new city</a>
+    </div>
+</div>
+
+<div class="cities">
+    {{#each cities}}
+    <div class="city card">
+        <a class="cancel" href="/users/{{../userId}}/cities/{{this._id}}/delete">X</a>
+        <a href="/users/{{../userId}}/cities/{{this._id}}">
+            <h3>{{this.name}}</h3>
+        </a>
+        <p>{{this.address}}</p>
+
+
+    </div>
+    {{/each}}
+</div>

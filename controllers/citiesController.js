@@ -11,7 +11,7 @@ router.get('/', (request, response) => {
             response.render('cities/index', {
                 userName: `${user.name}`,
                 userId: user._id,
-                stores: user.cities,
+                cities: user.cities,
                 pageTitle: 'Cities'
             })
         })
@@ -47,39 +47,39 @@ router.get('/:cityId', (request, response) => {
         })
 })
 
-router.post('/', (request, response) => {
-    const userId = request.params.userId
-    const newCity = request.body
+// router.post('/', (request, response) => {
+//     const userId = request.params.userId
+//     const newCity = request.body
 
-    User.findById(userId)
-        .then((user) => {
-            user.stores.push(newStore)
-            return user.save()
-        })
-        .then(() => {
-            response.redirect(`/users/${userId}/cities`)
-        })
-        .catch((error) => {
-            console.log(error)
-        })
+//     User.findById(userId)
+//         .then((user) => {
+//             user.cities.push(newCity)
+//             return user.save()
+//         })
+//         .then(() => {
+//             response.redirect(`/users/${userId}/cities`)
+//         })
+//         .catch((error) => {
+//             console.log(error)
+//         })
 
-})
+// })
 
-router.get('/:cityId/delete', (request, response) => {
-    const userId = request.params.userId
-    const storeId = request.params.storeId
+// router.get('/:cityId/delete', (request, response) => {
+//     const userId = request.params.userId
+//     const storeId = request.params.storeId
 
-    User.findById(userId)
-        .then((user) => {
-            user.stores.id(storeId).remove()
-            return user.save()
-        })
-        .then(() => {
-            response.redirect(`/users/${userId}/cities/`)
-        })
-        .catch((error) => {
-            console.log(error)
-        })
-})
+//     User.findById(userId)
+//         .then((user) => {
+//             user.stores.id(storeId).remove()
+//             return user.save()
+//         })
+//         .then(() => {
+//             response.redirect(`/users/${userId}/cities/`)
+//         })
+//         .catch((error) => {
+//             console.log(error)
+//         })
+// })
 
 module.exports = router
