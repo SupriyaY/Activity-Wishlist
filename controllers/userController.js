@@ -87,7 +87,7 @@ const updatedUserInfo = request.body
 
 User.findByIdAndUpdate(userId, updatedUserInfo, {new: true})
 .then (() => {
-response.redirect(`/users/$[userId]`)
+response.redirect(`/users/${userId}`)
 })
 })
 
