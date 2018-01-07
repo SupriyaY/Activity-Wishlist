@@ -56,21 +56,33 @@ User.findById(userId)
 })
 .catch((error) => {
 console.log(error)
-
 })
 })
 
+router.get('/:activityId/delete', (request, response) => {
+const userId = request.params.userId
+const cityId = request.params.cityId
+const activityId = request.params.activityId
+
+User.findById(userId)
+.then((user) => {
+const city = user.cities.id(cityId)
+city.activitiesToComplete.id(activityId).remove()
 
 
+return user.save()
 
+})
 
+.then(() => {
+ response.redirect(`/users/${userId}/cities/${cityId}`)
 
+})
 
+.catch((error) => {
+console.log(error)
+})
 
-
-
-
-
-
+})
 
 module.exports = router
