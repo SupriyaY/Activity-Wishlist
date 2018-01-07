@@ -30,19 +30,49 @@ margin-bottom: 20px;
 
 
 /* Creating a flexbox around all of the user profiles on the user index page*/
-.travler-profile-container {
+.traveler-profile-container {
 display: flex;
 flex-direction: column;
 align-items: center;
 }
 
-/*Creating a flexbox for the inside of the containter for the traveler pro  */
-.traveler-profiles{
+/*Creating a flexbox for the inside of the containter for the traveler-profile div  */
+.traveler-profiles {
 display: flex;
-flex-direction: column;
-align-items: center;
-
+justify-content: center;
+flex-wrap: wrap;
+box-sizing: border-box;
+padding: 40px 0;
 }
+
+/* testing out sample css */
+.traveler-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: sipace-around;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0px 30px;
+  margin-bottom: 60px;
+  background-color: white;
+  width: 250px;
+  min-width: 200px;
+  height: 320px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.25s ease;
+}
+
+
+
+
+
+
+
+
+
 
 /* buttons */
 

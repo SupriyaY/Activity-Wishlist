@@ -34,7 +34,7 @@ router.post('/', (request, response) => {
       console.log(error)
     })
 })
-//show
+//Show route: 
 router.get('/:userId', (request, response) => {
  const userId = request.params.userId
 User.findById(userId)

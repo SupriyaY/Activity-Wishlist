@@ -4,7 +4,7 @@ const City = require('./models/City')
 const Activity = require('./models/Activity')
 const mongoose = require('mongoose')
 
-
+//Connecting to moongoose database
 mongoose.connect(process.env.MONGODB_URI)
 
 mongoose.connection.once('open', () => {
@@ -18,6 +18,7 @@ ${error}
     process.exit(-1)
 })
 
+//Delete a user and add a test user
 User.remove({}).then(() => {
         const Supsy = new User({
             username: 'SupsY',

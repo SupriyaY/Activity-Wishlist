@@ -1,7 +1,7 @@
 <div class="task">
     Home
 </div>
-<div class="user-profile-container">
+<div class="traveler-profile-container">
     <div class="traveler-profiles">
         {{#each users}}
         <a href="/users/{{this._id}}" class="link traveler-profile">
@@ -10,7 +10,7 @@
                 <img src="{{this.photo_url}}" alt="{{this.username}}'s profile photo"> {{else}}
                 <img src="https://picsum.photos/200/300" alt="{{this.username}}'s profile photo"> {{/if}}
             </div>
-            <div class="profile-name">
+            <div class="traveler-name">
                 {{this.name}} 
             </div>
         </a>
