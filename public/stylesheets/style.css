@@ -1,3 +1,5 @@
+
+/* adding simple css to body */
 body {
   padding: 50px;
   font-family: 'Acme', sans-serif;
@@ -15,19 +17,34 @@ width: 100%
 
 
 
+/* Hovering over the icons - didn't like the effect on the entire page will find alternative  */
+/* i:hover  */
 
-/* i:hover { */
 
-
+/* Users model index page home tab*/
+.task {
+align-self: flex-start;
+padding: 15px;
+margin-bottom: 20px;
 }
 
 
+/* Creating a flexbox around all of the user profiles on the user index page*/
+.travler-profile-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
 
+/*Creating a flexbox for the inside of the containter for the traveler pro  */
+.traveler-profiles{
+display: flex;
+flex-direction: column;
+align-items: center;
 
+}
 
-
-
-
+/* buttons */
 
 
 a {
@@ -43,8 +60,3 @@ a {
 
 
 
-.stepper {
-  align-self: flex-start;
-  padding: 15px;
-  margin-bottom: 20px;
-}

@@ -1,10 +1,10 @@
-<div class="stepper">
+<div class="task">
     Home
 </div>
-<div class="profile-card-container">
-    <div class="user-cards">
+<div class="user-profile-container">
+    <div class="traveler-profiles">
         {{#each users}}
-        <a href="/users/{{this._id}}" class="link user-card">
+        <a href="/users/{{this._id}}" class="link traveler-profile">
             <div class="user-image">
                 {{#if this.photo_url}}
                 <img src="{{this.photo_url}}" alt="{{this.username}}'s profile photo"> {{else}}
@@ -17,7 +17,7 @@
         {{/each}}
     </div>
 
-    <div class="button primary">
+    <div class="button main">
         <a href="/users/new">
             New User
         </a>
