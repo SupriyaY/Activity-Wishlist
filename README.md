@@ -18,9 +18,9 @@ https://shrouded-savannah-97398.herokuapp.com
 
 Figma was the tool used to design the prototype for the application.
 
-![Wireframe](https://github.com/SupriyaY/Activity-Wishlist/blob/master/Wireframe.png)
-
 ![ERD](https://github.com/SupriyaY/Activity-Wishlist/blob/master/ERD.png)
+
+![Wireframe](https://github.com/SupriyaY/Activity-Wishlist/blob/master/Wireframe.png)
 
 ## Features
 
