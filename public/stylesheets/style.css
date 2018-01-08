@@ -77,6 +77,15 @@ padding: 20px 0;
 
 
 
+/* Input form styles */
+
+.form-input{
+margin: 6px;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+text-align: right;
+}
 
 
 
@@ -85,7 +94,10 @@ padding: 20px 0;
 
 
 
-/*  */
+
+
+
+/*Show page styles  */
 
 /* buttons */
 .button {
