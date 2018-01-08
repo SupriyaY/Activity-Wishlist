@@ -79,6 +79,7 @@ padding: 20px 0;
 
 /* Input form styles */
 
+
 .form-input{
 margin: 6px;
 display: flex;
@@ -87,14 +88,9 @@ align-items: center;
 text-align: right;
 }
 
-
-
-
-
-
-
-
-
+.form-input label {
+  width: 100px;
+}
 
 
 /*Show page styles  */
@@ -123,6 +119,22 @@ background : rgba(226, 59, 59, 1);
   background: rgba(252, 123, 106, 1);
   ;
 }
+
+.button-container {
+display: flex;
+justify-content: space-between;
+}
+
+.button-container .button {
+  margin: 0 30px 0 0;
+
+}
+
+
+
+
+
+
 
 a {
   color: rgb(1, 8, 10);
