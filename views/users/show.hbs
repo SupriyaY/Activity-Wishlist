@@ -10,16 +10,16 @@
         <img src="https://picsum.photos/200/300" alt="{{user.username}}'s profile photo"> {{/if}}
     </div>
     <div class="user-info">
+        <div>Username:
+            <strong>{{user.username}}</strong>
+        </div>
         <div class="button-container">
-            <div class="button primary">
-                <a href="/users/{{user._id}}/edit">Update User Details</a>
+            <div class="button main">
+                <a href="/users/{{user._id}}/edit">Edit User Profile</a>
             </div>
             <div class="button warning">
                 <a href="/users/{{user._id}}/delete">Delete User</a>
             </div>
-        </div>
-        <div>Username:
-            <strong>{{user.username}}</strong>
         </div>
         <div class="visit-city">
             <a href="/users/{{user._id}}/cities">Cities To Visit</a>
