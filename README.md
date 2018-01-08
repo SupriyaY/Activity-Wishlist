@@ -31,8 +31,9 @@ The purpose of the application is to organize the places a user is interested in
 
 ## Future Improvements
 
-*
-*
-*
-*
-*
+* Adding Javascript
+* More complex CSS including animation
+* Time management - better from project one but still have a long way to go
+* DRY code
+* Adding more models
+* Learning and using tools to make design easier - Materialize, Bootstrap, etc.
