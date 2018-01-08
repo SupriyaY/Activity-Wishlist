@@ -2,7 +2,7 @@
 
 ## Overview
 
-My move to Atlanta, Georgia, along with my future travel aspirations inspired me to formulate my idea for this application.  I wanted to create an application that I could use to log the places I want to visit and the acitivities I want to do when I arrive. Booking a flight is easy, however creating a plan can be challenging task.  My application allows you to list the places you wish to visit and add the activites you want to do.
+My move to Atlanta, Georgia, along with my future travel aspirations inspired me to formulate my idea for this application.  I wanted to create an application that I could use to log the places I want to visit and the acitivities I want to do when I arrive. Booking a flight is easy, however creating a plan can be a challenging task.  My application allows you to list the places you wish to visit and add the activites you want to do.
 
 ## Link to Heroku
 

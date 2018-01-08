@@ -5,15 +5,15 @@
     <div class="traveler-profiles">
         {{#each users}}
         <a href="/users/{{this._id}}" class="link traveler-profile">
-            <div class="user-image">
+            <div class="traveler-image">
                 {{#if this.photo_url}}
                 <img src="{{this.photo_url}}" alt="{{this.username}}'s profile photo"> {{else}}
                 <img src="https://picsum.photos/200/300" alt="{{this.username}}'s profile photo"> {{/if}}
             </div>
-            <div class="traveler-name">
-                {{this.name}} 
-            </div>
-        </a>
+<div class="traveler-name">
+    {{this.name}}
+</div>
+        </a>    
         {{/each}}
     </div>
 
