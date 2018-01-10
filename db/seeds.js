@@ -36,8 +36,8 @@ User.remove({}).then(() => {
             activity_name: "Brunch",
             activity_address: "1901 Collins Ave, Miami Beach, FL 33139",
             activity_description: "Boozey brunch and lounging poolside.",
-            visited: true,
-            recommend_to_friends: true
+            visited: "yes",
+            recommend_to_friends: "yes"
         })
 
         miami.activitiesToComplete.push(shoreClub)
@@ -53,8 +53,8 @@ User.remove({}).then(() => {
             activity_name: 'Football game',
             activity_address: '1414 Andrew Young International Blvd NW, Atlanta, GA 30313',
             activity_description: 'Football, beer, and hotdogs at Mercedes-Benz Stadium!',
-            visited: yes,
-            recommend_to_friends: yes
+            visited: "yes",
+            recommend_to_friends: "yes"
         })
 
         atlanta.activitiesToComplete.push(footballGame)
