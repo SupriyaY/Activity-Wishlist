@@ -10,16 +10,17 @@
 
 body {
   padding: 50px;
-  background-image:
-  url(https://i.imgur.com/CwzvRs9.jpg);
+  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 100%);
   background-size: cover;
-  background-repeat:no-repeat;
 }
 
+/* .pretty{
+  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 100%);
+  background-size: cover;
+} */
 
-h1.bounceOutRight {
-  animation-name: bounceOutRight;
-}
+
+
 
 /* INDEX users */
 /* creating a flex box for the contents of the layout page */
@@ -113,9 +114,13 @@ text-align: right;
 }
 
 .form-input label {
-  width: 100px;
+  width: 30vh;
+  height: 4vh;
 }
 
+.label{
+  cursor: default;
+}
 
 
 /* buttons */
@@ -205,22 +210,36 @@ a {
 
 .city.card {
   display: flex;
-  flex-wrap: wrap;
-  align-content: baseline;
+  flex-direction: column;
+  align-content: center;
   justify-content: center;
-  align-items: baseline;
-  width: 30%;
-  min-width: 125px;
+  align-items: center;
+  width: 20%;
+  min-width: 100px;
   background: white;
   padding: 10px;
   text-align: center;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+   text-decoration: none;
+    margin: 10px 30px;
+    margin-bottom: 30px;
+
 }
 
-
+/* 
 .city.card {
-  align-self: flex-end;
   text-decoration: none;
+  margin: 0 30px;
+  margin-bottom: 70px;
+} */
+
+
+.cities{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
 }
 
 

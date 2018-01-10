@@ -1,4 +1,4 @@
-<div class="stepper">
+<div class="task">
     <a href="/users">Home</a> /
     <a href="/users/{{userId}}">Profile</a> /
     <a href="/users/{{userId}}/cities">Cities</a> / {{city.city_name}}
@@ -13,8 +13,8 @@
 
 <div>
     <div class="activity-header">
+        <a class="button main" href="/users/{{userId}}/cities/{{city._id}}/activities/new">Add an Activity</a>
         <h3>Activity List:</h3>
-        <a class="button primary" href="/users/{{userId}}/cities/{{city._id}}/activities/new">Add an Activity</a>
     </div>
 
     <div class="activities">
