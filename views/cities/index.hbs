@@ -5,7 +5,7 @@
 
 <div class="city-header">
     <h1>{{userName}}'s Cities</h1>
-    <div class="button primary">
+    <div class="button main">
         <a href="/users/{{userId}}/cities/new">Add a new city</a>
     </div>
 </div>
@@ -13,7 +13,7 @@
 <div class="cities">
     {{#each cities}}
     <div class="city card">
-        <a class="cancel" href="/users/{{../userId}}/cities/{{this._id}}/delete">X</a>
+        <a class="cancel" href="/users/{{../userId}}/cities/{{this._id}}/delete"></a>
         <a href="/users/{{../userId}}/cities/{{this._id}}">
             <h3>{{this.city_name}}</h3>
         </a>
