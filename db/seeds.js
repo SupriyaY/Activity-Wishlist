@@ -53,8 +53,8 @@ User.remove({}).then(() => {
             activity_name: 'Football game',
             activity_address: '1414 Andrew Young International Blvd NW, Atlanta, GA 30313',
             activity_description: 'Football, beer, and hotdogs at Mercedes-Benz Stadium!',
-            visited: true,
-            recommend_to_friends: true
+            visited: yes,
+            recommend_to_friends: yes
         })
 
         atlanta.activitiesToComplete.push(footballGame)
