@@ -23,7 +23,7 @@ User.remove({}).then(() => {
         const Supsy = new User({
             username: 'SupsY',
             name: 'Supriya Yerramilli',
-            photo_url: 'https://i.imgur.com/xln20Nb.jpg?1'
+            photo_url : 'https://i.imgur.com/3XCJ5EZ.png?3'
 
         })
 
@@ -67,7 +67,7 @@ User.remove({}).then(() => {
         return User.create({
             username: 'NintiC',
             name: 'Ninti Chance',
-            photo_url: 'https://i.imgur.com/Wj8WXHU.png?2'
+            photo_url : 'https://i.imgur.com/IcdNK6r.png?1'
 
         })
     }).then((ninti) => {
@@ -83,6 +83,44 @@ User.remove({}).then(() => {
 
 return ninti.save()
         })
+
+
+.then(() => {
+return User.create({username: 'AlexM', 
+name: 'Alex Mink', 
+photo_url : 'https://i.imgur.com/cQigItX.png?1'
+})
+})
+.then((alex) => {
+
+
+const austin = new City({city_name: 'Austin'})
+
+const chicago = new City({city_name: 'Chicago'})
+
+alex.cities.push(austin, chicago)
+
+return alex.save()
+})
+
+
+.then(() => {
+    return User.create({username: 'ClimberBoy', 
+    name: 'Jon Ruben', 
+    photo_url : 'https://i.imgur.com/1yHRoDB.png?1'
+})
+}).then((jon) => {
+
+    const bolder = new City({city_name: 'Bolder'})
+
+
+    jon.cities.push(bolder)
+
+    return jon.save()
+})
+
+
+
                     .catch((error) => {
                         console.log('Error saving seeded data!')
                         console.log(error)
