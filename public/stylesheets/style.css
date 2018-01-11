@@ -1,4 +1,8 @@
 
+html{
+  min-height: 100%
+}
+
 /* adding simple css to body */
 
 * {
@@ -12,6 +16,7 @@ body {
   padding: 50px;
   background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 100%);
   background-size: cover;
+  min-height: 100%
 }
 
 
@@ -110,7 +115,7 @@ text-align: right;
 }
 
 .form-input label {
-  width: 30vh;
+  /* width: 30vh; */
   height: 4vh;
 }
 
@@ -191,7 +196,7 @@ width: 300px;
 .button-container {
 display: flex;
 flex-direction: column;
-align-items: center;
+align-items: flex-end;
 justify-content: center;
 /* margin-left: 20px; */
 }

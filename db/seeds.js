@@ -63,6 +63,51 @@ User.remove({}).then(() => {
 
         return Supsy.save()
 
+
+User
+    .remove({})
+    .then(() => {
+const carrie = new User({
+    username: 'CarrieB', name: 'Carrie Bradshaw', 
+    photo_url: 'https//i.imgur.com/DfCAISL.png?1'
+})
+
+        const maine = new City({city_name: 'Portland'})
+        const graffiti = new Activity({
+            activity_place: "Graffiti Walls",
+            activity_name: "Being hipster",
+            activity_address: "567 Walrus Road, Portland, Maine",
+            activity_description: "Taking pictures for IG.",
+            visited: "yes",
+            recommend_to_friends: "yes"
+        })
+
+        miami
+            .activitiesToComplete
+            .push(maine)
+
+        const = new City({city_name: 'Atlanta'})
+
+        const footballGame = new Activity({
+            activity_place: 'Atlanta Falcons game',
+            activity_name: 'Football game',
+            activity_address: '1414 Andrew Young International Blvd NW, Atlanta, GA 30313',
+            activity_description: 'Football, beer, and hotdogs at Mercedes-Benz Stadium!',
+            visited: "yes",
+            recommend_to_friends: "yes"
+        })
+
+        new york
+            .activitiesToComplete
+            .push(footballGame)
+
+        Supsy
+            .cities
+            .push(miami, atlanta)
+
+        return Supsy.save()
+
+
     }).then(() => {
         return User.create({
             username: 'NintiC',
