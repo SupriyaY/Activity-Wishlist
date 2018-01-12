@@ -103,16 +103,16 @@ User
         return carrie.save()
     })
     .then(() => {
-        return User.create({username: 'NintiC', name: 'Ninti Chance', photo_url: 'https://i.imgur.com/IcdNK6r.png?1'})
+        return User.create({username: 'NintiC', 
+        name: 'Ninti Chance', 
+        photo_url: 'https://i.imgur.com/IcdNK6r.png?1'})
     })
     .then((ninti) => {
         const newYork = new City({city_name: 'New York'})
 
         const losAngeles = new City({city_name: 'Los Angeles'})
 
-        ninti
-            .cities
-            .push(newYork, losAngeles)
+        ninti.cities.push(newYork, losAngeles)
 
         return ninti.save()
     })
@@ -144,6 +144,48 @@ User
 
         return jon.save()
     })
+
+.then(() => {
+return User.create({username: 'Skiing87', name: 'Dylan Roberts', photo_url: 'https://i.imgur.com/sYAcHw8.png?1'})
+})
+.then((dylan) => {
+
+const aspen = new City({city_name: 'Aspen'})
+
+dylan
+    .cities
+    .push(aspen)
+
+return dylan.save()
+})
+
+.then(() => {
+return User.create({username: 'bloggerbabe', name: 'Michaela Oza', photo_url: 'https://i.imgur.com/t3fGHIF.jpg?1'})
+}).then((micky) => {
+
+    const houston = new City({city_name: 'Houston'})
+
+    micky
+        .cities
+        .push(houston)
+
+    return micky.save()
+})
+
+.then(() => {
+return User.create({username: 'lakehouseowner', name: 'Mike Willis', photo_url: 'https://i.imgur.com/fe1dd81.png?1'})
+}).then((mikey) => {
+
+    const tahoe = new City({city_name: 'Tahoe City'})
+
+    mikey
+        .cities
+        .push(tahoe)
+
+    return mikey.save()
+})
+
+
     .catch((error) => {
         console.log('Error saving seeded data!')
         console.log(error)
