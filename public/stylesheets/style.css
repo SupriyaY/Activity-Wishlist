@@ -228,6 +228,7 @@ i:hover {
   justify-content: center;
   align-items: center;
   width: 300px;
+  /* margin-top: 10px; */
 }
 
 
@@ -279,21 +280,6 @@ a:hover {
   margin-bottom: 30px;
 }
 
-
-/* .user-info{
-  margin-left: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-} */
-
-
-/* 
-.city.card {
-  text-decoration: none;
-  margin: 0 30px;
-  margin-bottom: 70px;
-} */
 
 .cities {
   display: flex;
