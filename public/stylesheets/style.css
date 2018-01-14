@@ -6,13 +6,13 @@ html {
 /* adding simple css to body */
 
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Shadows Into Light Two';
   font-weight: 400
 }
 
 body {
   padding: 50px;
-  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 100%);
+  background: linear-gradient(141deg, #0fb8ad 0%, #91d1d7 51%, #2cb5e8 100%);
   background-size: cover;
   min-height: 100%
 }
@@ -144,16 +144,19 @@ cursive;
   height: 40px;
   margin: 10px;
   transition: all 0.25s ease;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Shadows Into Light Two';
 }
 
-.button.main a {
+/* .button.main a {
   text-decoration: none;
-}
+} */
 
 .button.main {
-  background: rgba(55, 166, 208, 1);
-  color: rgb(1, 8, 10)
+  background: rgb(49, 174, 91);
+  color: rgb(1, 8, 10);
+  font-family: 'Shadows Into Light Two';
+  font-size: 18px
+
 }
 
 .button.main:hover {
@@ -163,12 +166,11 @@ cursive;
   ;
 }
 
-.button.main,
 .button.main a {
   color: rgb(1, 8, 10);
-  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
-}
+ text-decoration: none;
+ }
 
 .button.warning {
   background: rgba(226, 59, 59, 1);
