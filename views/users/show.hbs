@@ -1,10 +1,11 @@
-<div class = play></div>
+
 <div class="task">
     <a href="/users">Home</a> / Profile
 </div>
 
-<h1>{{user.name}}</h1>
+{{!-- <h1>{{user.name}}</h1> --}}
 <div class="user-container">
+    <h1>{{user.name}}</h1>
     <div>
         {{#if user.photo_url}}
         <img src="{{user.photo_url}}" alt="{{user.username}}'s profile photo"> {{else}}
@@ -26,4 +27,4 @@
             <a href="/users/{{user._id}}/cities">Cities To Visit</a>
         </div>
     </div>
-    </div>
+</div>
