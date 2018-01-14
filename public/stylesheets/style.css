@@ -90,12 +90,14 @@ body {
 .traveler-profile:hover {
   opacity: 0.8;
   position: relative; 
-  top: -10px;
+  top: -20px;
 }
 
 wish-nav,
 i:hover {
-  opacity: 0.5
+  opacity: 0.5;
+   position: relative;
+   top: -10px;
 }
 
 .traveler-profile img {
@@ -156,6 +158,8 @@ cursive;
 
 .button.main:hover {
   background: rgba(198, 216, 211, 1);
+   position: relative;
+   bottom: -2px;
   ;
 }
 
@@ -173,6 +177,8 @@ cursive;
 
 .button.warning:hover {
   background: rgba(252, 123, 106, 1);
+   position: relative;
+   bottom: -2px;
 }
 
 .button a {
