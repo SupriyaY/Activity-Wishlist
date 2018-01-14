@@ -50,7 +50,8 @@ align-items: center;
 }
 
 .traveler-name {
-  font-family: "Rubik";
+  font-family: 'Shadows Into Light Two',
+  cursive;
   font-weight: 500;
   font-size: 1.35rem;
 }
@@ -65,7 +66,7 @@ box-sizing: border-box;
 padding: 20px 0;
 }
 
-/* testing out sample css  made*/
+/* testing out sample css index */
 .traveler-profile {
   display: flex;
   flex-direction: column;
@@ -97,9 +98,12 @@ wish-nav, i:hover{
 .traveler-profile img {
   height: 150px;
   width: 150px;
- 
-
+  margin-top: 10px
 }
+  /* .traveler-name {
+font-family: 'Shadows Into Light Two',
+cursive;
+  } */
 
 
 
@@ -178,6 +182,57 @@ color: rgb(1, 8, 10)
 
 /* Show page styles */
 
+  .play::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(transparent, transparent, white),
+  url(https://i.imgur.com/JJ47MmI.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  opacity: 0.25;
+  z-index: -999;
+
+  }
+
+
+.play {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .user-container{
@@ -193,6 +248,13 @@ width: 300px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+
+
+.user-container img{
+  border-radius: 10%;
+  border: 5px black solid;
 }
 
 
