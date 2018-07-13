@@ -25,7 +25,8 @@ User
     .remove({})
     .then(() => {
         const Supsy = new User({
-            username: 'SupsY', name: 'Supriya Yerramilli', 
+            username: 'SupsY',
+            name: 'Supriya Yerramilli', 
             photo_url: 'https://i.imgur.com/3XCJ5EZ.png?3'})
 
         const miami = new City({city_name: 'Miami'})
